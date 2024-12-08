@@ -9,12 +9,12 @@
 
 <main class="table-container">
   <div *ngIf="showtable" class="table-config mat-elevation-z8">
-    <mat-form-field class="example-full-width">
+    <mat-form-field>
       <mat-label>Pesquisar</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="Pesquisar pagamentos" />
     </mat-form-field>
 
-    <div class="alignEnd px-2" (click)="openAddDialog(false)">
+    <div class="alignEnd px-2" id="add-btn" (click)="openAddDialog(false)">
       <a mat-fab extended>
         <mat-icon>add</mat-icon>
         Adicionar
@@ -52,10 +52,10 @@
       <ng-container matColumnDef="Ações">
         <th mat-header-cell *matHeaderCellDef> Ações </th>
         <td mat-cell *matCellDef="let element">
-          <button mat-icon-button color="primary" (click)="openEditDialog(element, true)">
+          <button id="edit-btn" mat-icon-button color="primary" (click)="openEditDialog(element, true)">
             <mat-icon>edit</mat-icon>
           </button>
-          <button mat-icon-button color="warn" (click)="openDeletDialog(element)"><mat-icon>delete</mat-icon></button>
+          <button id="delet-btn" mat-icon-button color="warn" (click)="openDeletDialog(element)"><mat-icon>delete</mat-icon></button>
         </td>
       </ng-container>
 

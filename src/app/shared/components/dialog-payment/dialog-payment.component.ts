@@ -62,12 +62,12 @@ export class DialogPaymentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.dataToView.edit) this.fillFields();
     this.dataToView.title = 'Adicionar Pagamento'
+    if (this.dataToView.edit) this.fillFields();
   }
 
   fillFields() {
-    this.dataToView.title = 'Editar o Pagamento';
+    this.dataToView.title = 'Editar Pagamento';
     const formattedDate = this.dataToView.selectPayment.date.split('T')[0];
     this.formData.patchValue(this.dataToView.selectPayment);
     this.formData.patchValue({
