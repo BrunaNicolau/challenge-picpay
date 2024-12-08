@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>{{ dataToView.title }}</h2>
+
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="formData" class="form-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Usuário</mat-label>
+      <input matInput formControlName="name" placeholder="Digite o usuário" />
+      <mat-error *ngIf="formData.get('name')?.hasError('required')">Usuário é obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="title" placeholder="Digite o título" />
+      <mat-error *ngIf="formData.get('title')?.hasError('required')">Título é obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Data</mat-label>
+      <input matInput type="date" formControlName="date" />
+      <mat-error *ngIf="formData.get('date')?.hasError('required')">Data é obrigatória</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Valor</mat-label>
+      <input matInput type="number" formControlName="value" placeholder="Digite o valor" />
+      <mat-error *ngIf="formData.get('value')?.hasError('required')">Valor é obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Pago</mat-label>
+      <mat-select formControlName="isPayed">
+        <mat-option [value]="true">True</mat-option>
+        <mat-option [value]="false">False</mat-option>
+      </mat-select>
+      <mat-error *ngIf="formData.get('isPayed')?.hasError('required')">Valor é obrigatório</mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions class="alignCenter pb-5">
+  <button mat-button mat-dialog-close>Voltar</button>
+  <button mat-button [disabled]="!formData.valid" (click)="callService()">Salvar</button>
+</mat-dialog-actions>

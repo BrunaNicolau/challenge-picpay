@@ -1,0 +1,78 @@
+{
+  "tasks": [
+    {
+      "id": "8",
+      "name": "Elliot Andrews",
+      "username": "eandrews7",
+      "title": "DevOps Engineer",
+      "value": 3180,
+      "date": "2020-06-20T09:30:15Z",
+      "image": "https://robohash.org/elliotandrews.png?size=150x150&set=set1",
+      "isPayed": true
+    },
+    {
+      "id": "9",
+      "name": "Sophia Grant",
+      "username": "sgrant8",
+      "title": "Frontend Developer",
+      "value": 140.9,
+      "date": "2024-04-15T14:05:00Z",
+      "image": "https://robohash.org/sophiagrant.png?size=150x150&set=set1",
+      "isPayed": false
+    },
+    {
+      "id": "10",
+      "name": "Benjamin Carter",
+      "username": "bcarter9",
+      "title": "Backend Developer",
+      "value": 190.25,
+      "date": "2023-09-25T21:00:00Z",
+      "image": "https://robohash.org/benjamincarter.png?size=150x150&set=set1",
+      "isPayed": true
+    },
+    {
+      "id": "8b27",
+      "name": "bruna ",
+      "title": "Software Engineer",
+      "date": "2010-03-12",
+      "value": 7678,
+      "isPayed": false
+    },
+    {
+      "id": "c4f1",
+      "name": "teste debugger",
+      "title": "hsdgjhdsgfjh",
+      "date": "2010-10-10",
+      "value": 213213
+    },
+    {
+      "id": "031d",
+      "name": "teste novo",
+      "title": "dvfsdfdse",
+      "date": "2001-12-10",
+      "value": 3434
+    }
+  ],
+  "account": [
+    {
+      "email": "usuario@gmail.com",
+      "password": "usuario",
+      "id": "6f1a"
+    },
+    {
+      "email": "admin@example.com",
+      "password": "admin123",
+      "id": "7b5b"
+    },
+    {
+      "email": "johndoe@test.com",
+      "password": "johnpassword",
+      "id": "0604"
+    },
+    {
+      "email": "a@a.com",
+      "password": "123abc",
+      "id": "3ebb"
+    }
+  ]
+}
