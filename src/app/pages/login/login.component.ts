@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import {
-  FormBuilder,
+FormBuilder,
   FormGroup,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { AuthenticationService } from '../../services/authentication/authentication.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -13,7 +12,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+
+import { AuthenticationService } from '../../services/authentication/authentication.service';
 import { loginInterface } from '../../shared/interface/login.interface';
+import { validateAsyncEmail} from '../../shared/validarors/email.validators';
+import { passwordAsyncValidator } from '../../shared/validarors/password.validators';
 
 @Component({
   selector: 'app-login',
@@ -41,8 +44,8 @@ export class LoginComponent {
     private router: Router
   ) {
     this.authForm = this.fb.group({
-      userEmail: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
+      userEmail: ['', [Validators.required], [validateAsyncEmail]],
+      password: ['', [Validators.required], [passwordAsyncValidator]],
     });
   }
 

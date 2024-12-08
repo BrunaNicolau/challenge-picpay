@@ -14,6 +14,9 @@
             >
               E-mail é obrigatório
             </mat-error>
+            <mat-error *ngIf="authForm.controls['userEmail'].hasError('invalidEmail')">
+              E-mail inválido
+            </mat-error>
           </mat-form-field>
         </mat-grid-tile>
 
@@ -32,6 +35,9 @@
               *ngIf="authForm.controls['password'].hasError('required')"
             >
               Senha é obrigatório
+            </mat-error>
+            <mat-error *ngIf="authForm.controls['password'].hasError('passwordInvalid')">
+              A senha inválida
             </mat-error>
           </mat-form-field>
         </mat-grid-tile>
